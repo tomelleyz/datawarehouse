@@ -1,0 +1,44 @@
+@import "./variables";
+
+.menuContainer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid $purple;
+  padding: 2rem;
+  z-index: 50;
+}
+
+.closeBtnContainer {
+  text-align: right;
+}
+
+.closeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $heading__text__color;
+  font-family: $heading__font;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgba(156, 105, 226, 0.2);
+  cursor: pointer;
+}
+
+.menuItemsContainer {
+  margin: 1rem 0;
+}
+
+.menuItem {
+  padding: 1rem 0;
+}
+
+.menuItem:not(:last-of-type) {
+  font-weight: 500;
+}

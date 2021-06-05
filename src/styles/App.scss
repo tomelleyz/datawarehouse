@@ -95,3 +95,23 @@ img {
   background-color: rgba(156, 105, 226, 0.2);
   backdrop-filter: blur(5px);
 }
+
+.floatingIconPulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 19;
+  border-radius: 50%;
+  background-color: rgba(156, 105, 226, 0.2);
+}
+
+.backdrop {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+}

@@ -4,17 +4,45 @@ import AboutSection from "./components/AboutSection";
 import FeaturesSection from "./components/FeaturesSection";
 import FooterSection from "./components/FooterSection";
 import TestimonialSection from "./components/TestimonialSection";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import Backdrop from "./components/Backdrop";
+import MobileMenu from "./components/MobileMenu";
 
 function App() {
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
+
   return (
     <main>
-      <HeaderSection />
+      <AnimatePresence>
+        {openMobileMenu && (
+          <>
+            <Backdrop key="backdrop" setOpenMobileMenu={setOpenMobileMenu} />
+            <MobileMenu
+              key="mobileMenu"
+              setOpenMobileMenu={setOpenMobileMenu}
+            />
+          </>
+        )}
+      </AnimatePresence>
+
+      <HeaderSection setOpenMobileMenu={setOpenMobileMenu} />
       <AboutSection />
       <FeaturesSection />
       <TestimonialSection />
       <FooterSection />
 
       <div className="floatingContactIcon">
+        <motion.div
+          initial={{ scale: 0.6 }}
+          animate={{ scale: 1.2 }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: 2,
+          }}
+          className="floatingIconPulse"
+        />
         <svg
           width="30"
           height="29"

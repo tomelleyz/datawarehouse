@@ -2,10 +2,10 @@ import styles from "../styles/HeaderSection.module.scss";
 import Button from "./Button";
 import TopNavBar from "./TopNavBar";
 
-export default function HeaderSection() {
+export default function HeaderSection({ setOpenMobileMenu }) {
   return (
     <header className={styles.header}>
-      <TopNavBar />
+      <TopNavBar setOpenMobileMenu={setOpenMobileMenu} />
       <div className={styles.headerTextAndHeroSection}>
         <div className={styles.headerTextContainer}>
           <h1>Save your data storage here.</h1>

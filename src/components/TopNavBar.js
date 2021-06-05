@@ -2,11 +2,19 @@ import styles from "../styles/TopNavBar.module.scss";
 import logo from "../assets/icons/datawarehouse-logo.svg";
 import Button from "./Button";
 
-export default function TopNavBar() {
+export default function TopNavBar({ setOpenMobileMenu }) {
   return (
     <div className={styles.topNavBar}>
       <div className={styles.logoContainer}>
         <img src={logo} alt="DataWarehouse logo" />
+      </div>
+      <div
+        onClick={() => setOpenMobileMenu(true)}
+        className={styles.openMobileMenuBtn}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
       <nav className={styles.menu}>
         <div className={styles.menuItem}>About</div>
