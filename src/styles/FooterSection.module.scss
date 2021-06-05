@@ -1,0 +1,159 @@
+@import "./variables";
+
+.footerSection {
+  padding: $section__y__padding $section__x__padding;
+  border-top: 2px solid #f6fafd;
+}
+
+.tryFreeSectionAndCTAButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerCTAButtonsContainer button:first-of-type {
+  margin-right: 1rem;
+}
+
+.footerCTAButtonsContainer button:last-of-type {
+  margin-left: 1rem;
+}
+
+.footerLinksContainer {
+  display: flex;
+  padding: $section__y__padding 0 2.5rem;
+}
+
+.footerLogoAndContactInfoBox {
+  flex: 0 0 25%;
+  margin-right: auto;
+}
+
+.footerLogoBox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footerLogoAndContactInfoBox span {
+  font-size: 1.25rem;
+  color: $heading__text__color;
+  font-family: $heading__font;
+  margin-left: 1rem;
+}
+
+.footerAddress p {
+  font-weight: 500;
+  margin: 2rem 0 1.5rem;
+}
+
+.singleFooterLinksBox {
+  flex: 0 0 20%;
+}
+
+.singleFooterLinksBox h5 {
+  margin-top: 0.5rem;
+}
+
+.socialMediaLinksGroupBox {
+  display: inline-flex;
+}
+
+.singleSocialMediaLink {
+  border-radius: 50%;
+  background-color: #d5d5d5;
+  height: 2.375rem;
+  width: 2.375rem;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singleSocialMediaLink:nth-of-type(2) {
+  margin: 0 1rem;
+}
+
+.singleSocialMediaLink:hover {
+  background-color: $purple;
+}
+
+.copyrightText {
+  font-size: 0.875rem;
+}
+
+// Media queries
+@media (min-width: $xs) and (max-width: $sm__end) {
+  .tryFreeSectionAndCTAButtons {
+    flex-wrap: wrap;
+  }
+  .tryFreeTextSection {
+    flex: 0 0 65%;
+  }
+  .footerCTAButtonsContainer {
+    flex: 0 0 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  .footerCTAButtonsContainer button:first-of-type {
+    margin-right: 0;
+  }
+  .footerCTAButtonsContainer button:last-of-type {
+    margin-left: 0;
+  }
+  .footerCTAButtonsContainer button {
+    flex: 0 0 100%;
+    margin: 1rem 0;
+  }
+  .footerLinksContainer {
+    flex-wrap: wrap;
+  }
+  .footerLogoAndContactInfoBox {
+    flex: 0 0 100%;
+    order: 5;
+  }
+  .singleFooterLinksBox {
+    flex: 0 0 50%;
+    margin: 2rem 0;
+  }
+  .singleFooterLinksBox:last-of-type {
+    flex: 0 0 100%;
+    margin: 0 0 5rem;
+  }
+  .footerAddress p {
+    margin: 1.5rem 0 0.75rem;
+  }
+}
+
+@media (min-width: $sm) and (max-width: $sm__end) {
+  .tryFreeTextSection {
+    flex: 0 0 45%;
+  }
+  .footerCTAButtonsContainer button {
+    flex: 0 0 auto;
+  }
+  .footerCTAButtonsContainer button:first-of-type {
+    margin-right: 1rem;
+  }
+  .footerCTAButtonsContainer button:last-of-type {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: $md) and (max-width: $md__end) {
+  .tryFreeTextSection {
+    flex: 0 0 30%;
+  }
+  .footerLinksContainer {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footerLogoAndContactInfoBox {
+    flex: 0 0 100%;
+    order: 5;
+  }
+  .singleFooterLinksBox {
+    flex: 0 0 30%;
+    margin: 2rem 0;
+  }
+}

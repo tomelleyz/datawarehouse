@@ -1,0 +1,52 @@
+@import "./variables";
+
+.featuresSection {
+  padding: $section__y__padding $section__x__padding $section__y__padding 3vw;
+  overflow-x: hidden;
+}
+
+.featuresSectionHeading {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.featuresSectionHeading h2 {
+  margin-top: 0;
+}
+
+.featureCardGroupContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.singleFeatureCardContainer {
+  flex: 0 1 45%;
+  padding: 0 1rem;
+  margin: 1.5rem 0;
+}
+
+// Media queries
+@media (min-width: $xs) and (max-width: $sm__end) {
+  .featuresSection {
+    padding: $section__y__padding 11vw $section__y__padding 7vw;
+  }
+  .singleFeatureCardContainer {
+    flex: 0 1 100%;
+    padding: 0 1rem;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (min-width: $md) and (max-width: $md__end) {
+  .featuresSection {
+    padding: $section__y__padding 8.5vw $section__y__padding 5vw;
+  }
+}
+
+@media (min-width: $lg) and (max-width: $lg__end) {
+  .featuresSection {
+    padding: $section__y__padding 8.5vw $section__y__padding 2.5vw;
+  }
+}

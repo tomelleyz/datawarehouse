@@ -1,0 +1,141 @@
+@import "./variables";
+
+.testimonialSection {
+  padding: $section__y__padding $section__x__padding;
+  overflow-x: hidden;
+}
+
+.testimonialSectionContentBox {
+  background-color: $purple;
+  padding: 2rem 4rem;
+  border-radius: 3rem;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 2rem 0 4rem;
+  color: #ffffff;
+}
+
+.testimonialsGroupBox {
+  display: flex;
+  padding: 0 0 2rem 0;
+  margin: 0 -0.5rem;
+}
+
+.testimonialCard {
+  flex: 0 0 70%;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.3);
+  padding: 3rem 4rem;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid $purple;
+  margin: 0 0.5rem;
+}
+
+.whiteOverlay {
+  position: relative;
+}
+
+.whiteOverlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 70%
+  );
+}
+
+.customerImg {
+  padding-right: 2rem;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 0.125rem;
+}
+
+.role {
+  color: $purple;
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+}
+
+.remarks {
+  margin: 0;
+}
+
+.indicatorsAndNavButtonsBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.indicatorsBox {
+  display: inline-flex;
+}
+
+.indicator {
+  background-color: #ffffff;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin: 0 4px;
+  transition: 0.3s;
+}
+
+.indicator[data-indicator="active"] {
+  background-color: $pink;
+  transform: scale(2);
+}
+
+.navButtonsBox {
+  display: inline-flex;
+}
+
+.prevBtn,
+.nextBtn {
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prevBtn {
+  margin-right: 2.5rem;
+}
+
+.prevBtn:hover {
+  transform: translateX(-8px);
+}
+
+.nextBtn:hover {
+  transform: translateX(8px);
+}
+
+// Media queries
+@media (min-width: $xs) and (max-width: $xs__end) {
+  .testimonialSectionContentBox {
+    padding: 2rem 3rem;
+  }
+  .testimonialCard {
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: $sm) and (max-width: $md__end) {
+  .testimonialCard {
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+  }
+}

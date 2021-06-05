@@ -1,0 +1,81 @@
+@import "./variables.scss";
+
+.btn {
+  font-family: $body__font;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+.btnPrimary {
+  background-color: $purple;
+  color: #ffffff;
+  border: 1px solid $purple;
+}
+
+.btnSecondary {
+  background-color: $pink;
+  color: #ffffff;
+  border: 1px solid $pink;
+}
+
+.btnAlternate {
+  background-color: #ffffff;
+  color: $heading__text__color;
+  box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+  border: 1px solid #ffffff;
+}
+
+.btnAlternate svg,
+.btnPlain svg {
+  margin-left: 0.75rem;
+  transition: 0.3s;
+}
+
+.btnAlternate,
+.btnPlain {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPlain {
+  background-color: transparent;
+  color: $heading__text__color;
+}
+
+.btnPrimary:focus,
+.btnPrimary:hover,
+.btnSecondary:focus,
+.btnSecondary:hover {
+  background-color: #ffffff;
+  color: $heading__text__color;
+}
+
+.btnAlternate:focus,
+.btnAlternate:hover {
+  background-color: $purple;
+  color: #ffffff;
+  border: 1px solid $purple;
+}
+
+.btnAlternate:focus svg,
+.btnAlternate:hover svg,
+.btnPlain:focus svg,
+.btnPlain:hover svg {
+  transform: translateX(8px);
+}
+
+.btnAlternate:focus svg path,
+.btnAlternate:hover svg path {
+  stroke: #ffffff;
+}
+
+.btnPlain:focus,
+.btnPlain:hover {
+  color: $purple;
+}

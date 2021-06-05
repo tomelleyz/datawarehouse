@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+.topNavBar {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.logoContainer {
+  flex: 0 0 20%;
+}
+
+.menu {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 50%;
+}
+
+.menuItem {
+  padding: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menuItem:hover {
+  color: $purple;
+}
+
+.topNavBarCTA {
+  flex: 0 0 30%;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+// Media queries
+@media (min-width: $xs) and (max-width: $md__end) {
+  .menu,
+  .topNavBarCTA {
+    display: none;
+  }
+}

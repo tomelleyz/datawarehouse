@@ -1,0 +1,91 @@
+@import "./variables";
+
+.featureCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.trapezoidShape {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 3rem;
+  background-color: #68c9ba;
+  opacity: 0.1;
+  transform: skewX(-20deg);
+}
+
+.trapezoidShapeEqualizer {
+  position: absolute;
+  right: -50px;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background-color: #68c9ba;
+  z-index: -1;
+  border-radius: 3rem;
+  transform: skewX(20deg);
+}
+
+.featureCardImgContainer {
+  flex: 0 0 30%;
+}
+
+.featureCardTextContainer {
+  flex: 0 0 50%;
+  padding: 1rem 0 0.5rem;
+}
+
+.featureCardTextContainer h4 {
+  font-weight: normal;
+}
+
+.featureCardTextContainer button {
+  padding: 1rem 0;
+}
+
+// Media queries
+@media (min-width: $xs) and (max-width: $md__end) {
+  .featureCard {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem 0 0;
+  }
+  .featureCardImgContainer {
+    flex: 0 0 45%;
+  }
+  .featureCardTextContainer {
+    flex: 0 0 85%;
+    padding: 0 0 0.5rem;
+    margin-left: auto;
+  }
+  .featureCardTextContainer h4 {
+    margin-top: 0;
+  }
+  .trapezoidShape {
+    transform: skewX(-10deg);
+    width: 95%;
+  }
+  .trapezoidShapeEqualizer {
+    transform: skewX(10deg);
+    right: -30px;
+  }
+}
+
+@media (min-width: $lg) and (max-width: $lg__end) {
+  .trapezoidShape {
+    transform: skewX(-10deg);
+    width: 80%;
+  }
+  .trapezoidShapeEqualizer {
+    transform: skewX(10deg);
+    right: -25px;
+  }
+}
