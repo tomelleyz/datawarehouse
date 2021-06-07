@@ -18,21 +18,21 @@ export default function FeaturesSection() {
       title: "24 Hours Access",
       img: hrsAccessImg,
       description:
-        "Don’t worry if your data is very large, the DataWarehouse provides a search engine, which is useful for making it easier to find data effectively saving time.",
+        "Access is given 24 hours a full morning to night and meet again in the morning, giving you comfort when you need data when urgent.",
       bgColor: "#9C69E2",
     },
     {
       title: "Print Out",
       img: printOutImg,
       description:
-        "Don’t worry if your data is very large, the DataWarehouse provides a search engine, which is useful for making it easier to find data effectively saving time.",
+        "Print Out service gives you convenience if someday you need to print data, just edit it all and just print it.",
       bgColor: "#F063B8",
     },
     {
       title: "Security Code",
       img: securityCodeImg,
       description:
-        "Don’t worry if your data is very large, the DataWarehouse provides a search engine, which is useful for making it easier to find data effectively saving time.",
+        "Data Security is one of our best facilities. Allows for your files to be safer. The files can be secured with a code or password you created, so only you can open it.",
       bgColor: "#2D9CDB",
     },
   ];
