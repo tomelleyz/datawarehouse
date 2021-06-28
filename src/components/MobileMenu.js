@@ -41,7 +41,7 @@ export default function MobileMenu({ setOpenMobileMenu }) {
           onClick={() => setOpenMobileMenu(false)}
           className={styles.closeBtn}
         >
-          X
+          &times;
         </span>
       </div>
       <div className={styles.menuItemsContainer}>
